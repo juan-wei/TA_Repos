@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.12.24" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.jw.shared.view.view" ClientType="Generic">
+  <pageMap>
+    <page path="/shared_tf_jsff.jsff" usageId="com_jw_view_shared_tf_jsffPageDef"/>
+    <page path="/shared_tf_jsf.jsf" usageId="com_jw_view_shared_tf_jsfPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_jw_view_shared_tf_jsffPageDef" path="com.jw.shared.view.view.pageDefs.shared_tf_jsffPageDef"/>
+    <page id="com_jw_view_shared_tf_jsfPageDef" path="com.jw.shared.view.view.pageDefs.shared_tf_jsfPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="com.jw.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+<!--    <BC4JDataControl id="AppModuleDataControl1" Package="com.jw.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl2" Package="com.jw.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/> -->
+    <BC4JDataControl id="AppModuleDataControl1" Package="com.jw.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

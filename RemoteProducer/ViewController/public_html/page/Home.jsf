@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Home.jsf" id="d1">
+        <af:form id="f2">
+            <af:panelSplitter id="ps1">
+                <f:facet name="first">
+                    <af:panelGroupLayout id="pgl1" layout="vertical">
+                        <!--<af:link text="Scan Jobs"
+                                 destination="adf.task-flow?_id=remote_url_tf&amp;_document=/WEB-INF/remote_url_tf.xml"
+                                 id="l1"/>-->
+                        <af:link text="Scan Jobs" action="remote_url_tf1" id="l2"/>
+                        <!--<af:link text="shared_tf_jsf"
+                                 destination="adf.task-flow?_id=shared_tf_jsf&amp;_document=/WEB-INF/shared_tf_jsf.xml"
+                                 id="l2"/> -->
+                        <!--<af:region value="#{bindings.shared_tf_jsff1.regionModel}" id="r2"/>-->
+                        <af:link text="Call jsf from sharedlib via URL" action="shared_tf_jsf1" id="l1"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="second">
+                    <af:panelGroupLayout id="pgl2">
+                        <af:region value="#{bindings.empchart1.regionModel}" id="r1"/>
+                        <af:region value="#{bindings.shared_tf_jsff1.regionModel}" id="r2"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="emp-chart">
+    <default-activity>chart</default-activity>
+    <data-control-scope>
+      <isolated/>
+    </data-control-scope>
+    <view id="chart">
+      <page>/page/chart.jsff</page>
+    </view>
+    <use-page-fragments/>
+    <visibility>
+      <remote-invocable/>
+    </visibility>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="GBK" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="ConsumerHome">
+    <page>/pages/consumer.jsf</page>
+  </view>
+  <task-flow-call id="call_remote_url_tf1">
+    <task-flow-reference>
+      <document>/WEB-INF/call_remote_url_tf.xml</document>
+      <id>call_remote_url_tf</id>
+    </task-flow-reference>
+  </task-flow-call>
+  <task-flow-call id="shared_tf_jsf1">
+    <task-flow-reference>
+      <document>/WEB-INF/shared_tf_jsf.xml</document>
+      <id>shared_tf_jsf</id>
+    </task-flow-reference>
+  </task-flow-call>
+  <control-flow-rule id="__1">
+    <from-activity-id>ConsumerHome</from-activity-id>
+    <control-flow-case id="__2">
+      <from-outcome>call_remote_url_tf1</from-outcome>
+      <to-activity-id>call_remote_url_tf1</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__3">
+    <from-activity-id>ConsumerHome</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome>shared_tf_jsf1</from-outcome>
+      <to-activity-id>shared_tf_jsf1</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>

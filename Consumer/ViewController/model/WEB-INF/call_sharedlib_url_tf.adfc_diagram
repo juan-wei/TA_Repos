@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">view1</property>
+      <property
+         name="x">651.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>view1&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">315.89648</property>
+      <property
+         name="page">/pages/call_sharedlib_url_tf.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowCall1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">taskFlowCall1</property>
+      <property
+         name="x">884.0</property>
+      <property
+         name="y">310.59766</property>
+      <property
+         name="documentReference">/WEB-INF/shared_tf_jsf.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">shared_tf_jsf</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowCall3">
+      <property
+         name="fromOutcome">toSLTF</property>
+      <property
+         name="sdm:polyPoints">R50,692.0,315.5459,843.0,310.24707,L50</property>
+   </ControlFlowCase>
+</SDM>

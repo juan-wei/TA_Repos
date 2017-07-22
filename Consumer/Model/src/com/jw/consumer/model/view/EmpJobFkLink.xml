@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EmpJobFkLink"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  EntityAssociation="com.jw.consumer.model.entity.EmpJobFkAssoc">
+  <ViewLinkDefEnd
+    Name="JobVO"
+    Cardinality="1"
+    Source="true"
+    Owner="com.jw.consumer.model.view.JobVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="JobVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.jw.consumer.model.view.JobVO.JobId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="EmployeeVO"
+    Cardinality="-1"
+    Owner="com.jw.consumer.model.view.EmployeeVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="EmployeeVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.jw.consumer.model.view.EmployeeVO.JobId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

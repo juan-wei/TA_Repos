@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="DeptMgrFkAssoc"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="EmployeeEO"
+    Cardinality="1"
+    Source="true"
+    Owner="com.jw.consumer.model.entity.EmployeeEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="EmployeeEO"/>
+      <Attr Name="_foreignKey" Value="com.jw.consumer.model.entity.EmployeeEO.EmpEmpIdPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.jw.consumer.model.entity.EmployeeEO.EmployeeId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="DepartmentEO"
+    Cardinality="-1"
+    Owner="com.jw.consumer.model.entity.DepartmentEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="DepartmentEO"/>
+      <Attr Name="_foreignKey" Value="com.jw.consumer.model.entity.DepartmentEO.DeptMgrFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.jw.consumer.model.entity.DepartmentEO.ManagerId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

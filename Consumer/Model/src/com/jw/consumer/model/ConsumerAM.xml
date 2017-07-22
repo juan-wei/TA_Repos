@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ConsumerAM"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="DepartmentVO1"
+    ViewObjectName="com.jw.consumer.model.view.DepartmentVO"/>
+  <ViewUsage
+    Name="EmployeeVO1"
+    ViewObjectName="com.jw.consumer.model.view.EmployeeVO"/>
+  <ViewUsage
+    Name="JobVO1"
+    ViewObjectName="com.jw.consumer.model.view.JobVO"/>
+  <ViewUsage
+    Name="JobsVVO1"
+    ViewObjectName="com.jw.consumer.model.view.JobsVVO"/>
+  <ViewUsage
+    Name="DepartmentVO2"
+    ViewObjectName="com.jw.consumer.model.view.DepartmentVO"/>
+  <ViewUsage
+    Name="EmployeeVO2"
+    ViewObjectName="com.jw.consumer.model.view.EmployeeVO"/>
+  <ViewUsage
+    Name="EmployeeVO3"
+    ViewObjectName="com.jw.consumer.model.view.EmployeeVO"/>
+  <ViewUsage
+    Name="EmployeeVO4"
+    ViewObjectName="com.jw.consumer.model.view.EmployeeVO"/>
+  <ViewLinkUsage
+    Name="DeptMgrFkLink1"
+    ViewLinkObjectName="com.jw.consumer.model.view.DeptMgrFkLink"
+    SrcViewUsageName="com.jw.consumer.model.ConsumerAM.EmployeeVO1"
+    DstViewUsageName="com.jw.consumer.model.ConsumerAM.DepartmentVO2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="com.jw.consumer.model.view.EmpManagerFkLink"
+    SrcViewUsageName="com.jw.consumer.model.ConsumerAM.EmployeeVO1"
+    DstViewUsageName="com.jw.consumer.model.ConsumerAM.EmployeeVO2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpDeptFkLink1"
+    ViewLinkObjectName="com.jw.consumer.model.view.EmpDeptFkLink"
+    SrcViewUsageName="com.jw.consumer.model.ConsumerAM.DepartmentVO1"
+    DstViewUsageName="com.jw.consumer.model.ConsumerAM.EmployeeVO3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpJobFkLink1"
+    ViewLinkObjectName="com.jw.consumer.model.view.EmpJobFkLink"
+    SrcViewUsageName="com.jw.consumer.model.ConsumerAM.JobVO1"
+    DstViewUsageName="com.jw.consumer.model.ConsumerAM.EmployeeVO4"
+    Reversed="false"/>
+  <AppModuleUsage
+    Name="AppModule1"
+    FullName="com.jw.model.AppModule"
+    SharedScope="0"/>
+</AppModule>

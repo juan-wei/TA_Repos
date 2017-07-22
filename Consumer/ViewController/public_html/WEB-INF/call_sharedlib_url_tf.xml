@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="call_sharedlib_url_tf">
+    <default-activity>view1</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <managed-bean id="__3">
+      <managed-bean-name>RemoteCallBean</managed-bean-name>
+      <managed-bean-class>com.jw.consumer.view.bean.RemoteCallBean</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <view id="view1">
+      <page>/pages/call_sharedlib_url_tf.jsf</page>
+    </view>
+    <task-flow-call id="taskFlowCall1">
+      <task-flow-reference>
+        <document>/WEB-INF/shared_tf_jsf.xml</document>
+        <id>shared_tf_jsf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>view1</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>toSLTF</from-outcome>
+        <to-activity-id>taskFlowCall1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

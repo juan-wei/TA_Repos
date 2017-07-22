@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">ProducerHome</property>
+      <property
+         name="x">409.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ProducerHome&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">209.89648</property>
+      <property
+         name="page">/page/Home.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>remote_url_tf1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">remote_url_tf1</property>
+      <property
+         name="x">63.686523</property>
+      <property
+         name="y">71.09766</property>
+      <property
+         name="documentReference">/WEB-INF/remote_url_tf.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">remote_url_tf</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowCall3">
+      <property
+         name="tosrcid">__2</property>
+      <property
+         name="fromOutcome">remote_url_tf1</property>
+      <property
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">L50,368.0,209.5459,104.68652,71.09766,R50</property>
+   </ControlFlowCase>
+</SDM>

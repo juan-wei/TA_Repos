@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="call_remote_url_tf.jsf" id="d1">
+        <af:form id="f1">
+            <af:link text="Call Remote URL Taskflow" id="l1" action="callRTF"/>
+          <!--  <af:button text="button 1" id="b1" action="callRTF"/> -->
+            
+        </af:form>
+    </af:document>
+</f:view>

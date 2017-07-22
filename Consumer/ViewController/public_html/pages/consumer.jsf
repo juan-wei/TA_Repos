@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="consumer.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelSplitter id="ps1">
+                <f:facet name="first">
+                    <af:panelGroupLayout id="pgl1" layout="vertical">
+                        <af:link text="Call Remote URL Task flow" action="call_remote_url_tf1" id="l1"/>
+                        <!--<af:region value="#{bindings.shared_tf_jsff1.regionModel}" id="r2"/> -->
+                        <af:link text="Call URL Task Flow from SharedLib" action="shared_tf_jsf1" id="l2"/>
+                    </af:panelGroupLayout> 
+                </f:facet>
+                <f:facet name="second">
+                    <af:panelGroupLayout id="pgl2">
+                        <af:region value="#{bindings.empchart1.regionModel}" id="r1"/>
+                        <!--<af:region value="#{bindings.shared_tf_jsff1.regionModel}" id="r2"/>-->
+                        <!--<af:region value="#{bindings.consumertffragment1.regionModel}" id="r2"/>-->
+                        <!--<af:region value="#{bindings.shared_tf_jsff1.regionModel}" id="r2"/>-->
+                        <af:region value="#{bindings.shared_tf_jsff1.regionModel}" id="r2"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>
