@@ -15,9 +15,6 @@
                 <f:facet name="second">
                     <af:panelGroupLayout id="pgl2">
                         <af:region value="#{bindings.empchart1.regionModel}" id="r1"/>
-                        <!--<af:region value="#{bindings.shared_tf_jsff1.regionModel}" id="r2"/>-->
-                        <!--<af:region value="#{bindings.consumertffragment1.regionModel}" id="r2"/>-->
-                        <!--<af:region value="#{bindings.shared_tf_jsff1.regionModel}" id="r2"/>-->
                         <af:region value="#{bindings.shared_tf_jsff1.regionModel}" id="r2"/>
                     </af:panelGroupLayout>
                 </f:facet>

@@ -4,10 +4,10 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <taskFlow id="empchart1" taskFlowId="/WEB-INF/emp-chart.xml#emp-chart" activation="deferred"
-              remoteConnectionName="empRegions" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="shared_tf_jsff1" taskFlowId="/WEB-INF/shared_tf_jsff.xml#shared_tf_jsff" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="empchart1" taskFlowId="/WEB-INF/emp-chart.xml#emp-chart" activation="deferred"
+              remoteConnectionName="empRegions" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>
